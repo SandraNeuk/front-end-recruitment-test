@@ -1,0 +1,78 @@
+@import "./variables";
+
+@mixin orderDetailsElement {
+    font-size: 12px;
+    margin: 0;
+    font-weight: 500;
+    color: black;
+}
+
+.order-details {
+    display: inline-block;
+    margin-right: $title-number-width;
+    width: calc(100% - #{$main-sections-width} - #{$title-number-width});
+    background: white;
+    border-radius: $checkout-border-radius;
+    padding: 5px;
+    box-shadow: 0 2px 1px $shadow-color;
+    height: 300px;
+
+    hr {
+        border-top: 1px dashed $shadow-color;
+    }
+
+    hr:last-of-type {
+        border: 1px dashed $background-color;
+    }
+
+    .order-title {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .order-details__panel {
+        @include displayFlexColumn(nowrap);
+        align-items: flex-start;
+        border: 2px dotted $shadow-color;
+        border-radius: $checkout-border-radius;
+        height: 100%;
+        padding: 15px;
+    
+        .order-details-elements {
+            width: 100%;
+    
+            .order-details-element {
+                @include displayFlexRow(wrap);
+                margin: 12px 0;
+                justify-content: space-between;
+            
+                .order-details-element__label {
+                    @include orderDetailsElement();
+                }
+                
+                .order-details-element__value {
+                    @include orderDetailsElement();
+                    text-align: right;
+                }
+                
+                .order-details-element__label-total {
+                    @include orderDetailsElement();
+                    font-weight: 900;
+                }
+                
+                .order-details-element__value-total {
+                    @include orderDetailsElement();
+                    font-weight: 900;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .order-details {
+        width: 100%;
+    }
+}

@@ -1,0 +1,21 @@
+$font-title: 'Raleway', sans-serif;
+$roboto-font: 'Roboto', sans-serif;
+$background-color: #f2f2f2;
+$shadow-color: #d3d3d3;
+$input-field-margin: 10px;
+$checkout-border-radius: 3px;
+$default-left-margin: 45px;
+$title-number-width: 25px;
+$main-sections-width: 65%;
+
+@mixin displayFlexRow($wrap) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: $wrap;
+}
+
+@mixin displayFlexColumn($wrap) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: $wrap;
+}
