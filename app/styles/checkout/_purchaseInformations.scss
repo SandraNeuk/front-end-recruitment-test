@@ -7,7 +7,7 @@
     button {
         width: calc(100% - 55px);
         margin: 20px 0;
-        margin-left: 45px;
+        margin-left: $default-left-margin;
         background: #6bd400;
         color: white;
         padding: 20px;
@@ -24,6 +24,12 @@
             vertical-align: top;
             filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(224deg) brightness(110%) contrast(104%);
         }
+    }
+
+    p {
+        width: calc(100% - #{$default-left-margin});
+        text-align: center;
+        margin-left: $default-left-margin;
     }
 }
 

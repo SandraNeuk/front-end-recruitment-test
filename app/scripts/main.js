@@ -78,8 +78,8 @@
   // Your custom JavaScript goes here
 })();
 
-function cloneBacon() {
-  const image = document.getElementById("bacon-image");
-  const imageContainer = document.getElementById("bacon-container");
-  imageContainer.appendChild(image.cloneNode(true));
-}
+// function cloneBacon() {
+//   const image = document.getElementById("bacon-image");
+//   const imageContainer = document.getElementById("bacon-container");
+//   imageContainer.appendChild(image.cloneNode(true));
+// }

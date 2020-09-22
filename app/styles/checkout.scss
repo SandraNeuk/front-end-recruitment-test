@@ -31,15 +31,12 @@
     input {
         @extend %input;
         color: #a3a3a3;
+        border-radius: $checkout-border-radius;
     }
 
     select {
         @extend %input;
         padding-left: 0;
-    }
-
-    input:focus {
-        color: darkgray;
     }
 }
 
